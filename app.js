@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 app.use(express.json());
 app.use(cookieParser());
 
+//User Service
 app.use("/api/v1", auth);
 
 module.exports = app;
