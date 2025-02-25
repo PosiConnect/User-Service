@@ -27,6 +27,21 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "user",
   },
+
+  Gender: {
+    type: String,
+    required: [true, "Please enter the Gender"],
+  },
+
+  Age: {
+    type: Number,
+    required: [true, "Please enter the Age"],
+  },
+
+  UserID: {
+    type: mongoose.Schema.Types.ObjectId,
+  },
+
   role: {
     type: String,
     default: "admin",

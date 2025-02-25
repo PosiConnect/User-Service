@@ -13,7 +13,7 @@ const {
   getUser,
   updateUser,
   deleteUser,
-} = require("./controllers/authController");
+} = require("../Controllers/authController");
 
 const {
   isAuthenticatedUser,
