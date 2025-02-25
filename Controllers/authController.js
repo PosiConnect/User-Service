@@ -1,5 +1,5 @@
 const catchAsync = require("../middlewares/catchAsyncError");
-const User = require("../models/userModels");
+const User = require("../Models/userModel");
 const ErrorHandler = require("../utils/errorHandler");
 const sendToken = require("../utils/jwt");
 const sendEmail = require("../utils/email");
@@ -7,12 +7,15 @@ const crypto = require("crypto");
 
 // Create the user Data
 exports.registerUser = catchAsync(async (req, res, next) => {
-  const { name, email, password, avatar } = req.body;
+  const { name, email, password, avatar, Gender, Age, UserID } = req.body;
   const user = await User.create({
     name,
     email,
     password,
     avatar,
+    Gender,
+    Age,
+    UserID,
   });
 
   sendToken(user, 201, res);
@@ -227,4 +230,3 @@ exports.deleteUser = catchAsync(async (req, res, next) => {
     user,
   });
 });
-e;
