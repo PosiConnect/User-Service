@@ -20,6 +20,7 @@ const {
   authorizeRoles,
 } = require("../middlewares/authenticate");
 
+//Routes for user
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/logout", logoutUser);
