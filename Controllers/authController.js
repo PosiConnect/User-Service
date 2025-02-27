@@ -139,7 +139,6 @@ exports.getUserProfile = catchAsync(async (req, res, next) => {
 });
 
 //change Password
-
 exports.changePassword = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
 
