@@ -5,10 +5,10 @@ const app = require("./app");
 
 dotenv.config({ path: path.join(__dirname, "config/.env") });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 connectDatabase();
 
-app.listen(3000, (req, res) => {
+app.listen(PORT, (req, res) => {
   console.log(`Hey I am from user - Service port number ${PORT}`);
 });
